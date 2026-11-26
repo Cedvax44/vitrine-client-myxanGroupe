@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact et devis gratuit | MYXAN Groupe Abidjan</title>
+  <meta name="description" content="Demandez un devis gratuit à MYXAN Groupe : choisissez votre prestation, votre quartier et le niveau d'urgence. Réponse rapide par téléphone ou WhatsApp.">
+  <meta name="theme-color" content="#F37021">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="MYXAN Groupe, accueil">
+        <img src="assets/img/logo.png" alt="" width="44" height="44" onerror="this.style.display='none'">
+        <span>MYXAN <strong>Groupe</strong></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav" class="nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="btn btn-small" aria-current="page">Devis gratuit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Demander un devis gratuit</h1>
+        <p class="lead">Dites-nous ce dont vous avez besoin. Nous vous répondons rapidement.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+
+        <!-- FORMULAIRE -->
+        <div>
+          <form id="quote-form" class="form" novalidate
+                action="https://formspree.io/f/VOTRE_ID" method="POST"
+                data-endpoint="">
+            <!-- Anti-spam (champ piège, doit rester vide) -->
+            <div class="hp" aria-hidden="true">
+              <label>Ne pas remplir <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+            </div>
+
+            <div class="field">
+              <label for="service">Type de prestation *</label>
+              <select id="service" name="service" required>
+                <option value="">Choisir…</option>
+                <option value="construction">Construction de maison</option>
+                <option value="renovation">Rénovation</option>
+                <option value="btp">BTP et gros œuvre</option>
+                <option value="etude">Étude technique</option>
+                <option value="bornage">Bornage</option>
+                <option value="terrain">Achat de terrain</option>
+                <option value="maison">Achat ou location de maison</option>
+                <option value="residence">Résidence meublée</option>
+                <option value="bureau">Fourniture de bureau</option>
+                <option value="autre">Autre</option>
+              </select>
+              <small class="error" id="err-service"></small>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="zone">Commune / zone *</label>
+                <select id="zone" name="zone" required>
+                  <option value="">Choisir…</option>
+                  <option>Cocody</option><option>Plateau</option><option>Marcory</option>
+                  <option>Koumassi</option><option>Treichville</option><option>Port-Bouët</option>
+                  <option>Yopougon</option><option>Abobo</option><option>Adjamé</option>
+                  <option>Attécoubé</option><option>Bingerville</option><option>Anyama</option>
+                  <option>Songon</option><option>Grand-Bassam</option>
+                  <option>Autre ville de Côte d'Ivoire</option>
+                </select>
+                <small class="error" id="err-zone"></small>
+              </div>
+              <div class="field">
+                <label for="quartier">Quartier / précision *</label>
+                <input id="quartier" name="quartier" type="text" placeholder="Ex. Djorogobité 1, près du marché" required>
+                <small class="error" id="err-quartier"></small>
+              </div>
+            </div>
+
+            <fieldset class="field">
+              <legend>Niveau d'urgence *</legend>
+              <label class="radio"><input type="radio" name="urgence" value="Urgent (sous 48 h)"> Urgent (sous 48 h)</label>
+              <label class="radio"><input type="radio" name="urgence" value="Cette semaine"> Cette semaine</label>
+              <label class="radio"><input type="radio" name="urgence" value="Ce mois-ci"> Ce mois-ci</label>
+              <label class="radio"><input type="radio" name="urgence" value="Pas pressé / projet à planifier"> Pas pressé / à planifier</label>
+              <small class="error" id="err-urgence"></small>
+            </fieldset>
+
+            <div class="field">
+              <label for="message">Décrivez votre besoin *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Surface, type de travaux, état actuel, délai souhaité…" required minlength="10"></textarea>
+              <small class="error" id="err-message"></small>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="nom">Nom complet *</label>
+                <input id="nom" name="nom" type="text" autocomplete="name" required>
+                <small class="error" id="err-nom"></small>
+              </div>
+              <div class="field">
+                <label for="tel">Téléphone / WhatsApp *</label>
+                <input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="01 23 45 67 89" required>
+                <small class="error" id="err-tel"></small>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email (facultatif)</label>
+              <input id="email" name="email" type="email" autocomplete="email">
+              <small class="error" id="err-email"></small>
+            </div>
+
+            <div class="field">
+              <label for="budget">Budget indicatif (facultatif)</label>
+              <select id="budget" name="budget">
+                <option value="">Je préfère ne pas préciser</option>
+                <option>Moins de 1 000 000 FCFA</option>
+                <option>1 à 5 millions FCFA</option>
+                <option>5 à 20 millions FCFA</option>
+                <option>Plus de 20 millions FCFA</option>
+              </select>
+            </div>
+
+            <label class="check">
+              <input type="checkbox" id="consent" name="consent" required>
+              <span>J'accepte que mes informations soient utilisées pour répondre à ma demande (<a href="mentions-legales.html#confidentialite">confidentialité</a>). *</span>
+            </label>
+            <small class="error" id="err-consent"></small>
+
+            <button type="submit" class="btn btn-block">Envoyer ma demande</button>
+          </form>
+
+          <div id="form-success" class="success" role="status" aria-live="polite" hidden>
+            <h2>✅ Merci, votre demande est prête !</h2>
+            <p>Pour une réponse encore plus rapide, envoyez-la directement sur WhatsApp en un clic.</p>
+            <a id="wa-send" class="btn btn-block" href="#" target="_blank" rel="noopener">Envoyer ma demande sur WhatsApp</a>
+            <button type="button" id="form-reset" class="btn btn-outline-dark btn-block">Faire une nouvelle demande</button>
+          </div>
+        </div>
+
+        <!-- COORDONNEES -->
+        <aside class="side">
+          <div class="card">
+            <h2>Nous joindre</h2>
+            <ul class="contact-list">
+              <li>📞 <a href="tel:+2250172392929">01 72 39 29 29</a></li>
+              <li>💬 <a data-wa href="https://wa.me/2250172392929" target="_blank" rel="noopener">WhatsApp</a></li>
+              <li>📍 Djorogobité 1, Abidjan</li>
+              <li>🕗 Lun–Sam : 8h – 18h <small>(à ajuster)</small></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2>Zone d'intervention</h2>
+            <p>Toutes les communes d'Abidjan et toute la Côte d'Ivoire.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><h3>MYXAN Groupe</h3><p>Construire ou donner vie à vos idées.</p></div>
+      <div><h3>Navigation</h3><p><a href="index.html">Accueil</a> · <a href="a-propos.html">À propos</a> · <a href="services.html">Services</a> · <a href="contact.html">Contact</a></p></div>
+      <div><h3>Contact</h3><p><a href="tel:+2250172392929">01 72 39 29 29</a><br>Djorogobité 1, Abidjan</p></div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> MYXAN Groupe. Tous droits réservés. · <a href="mentions-legales.html">Mentions légales et confidentialité</a></p>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-wa href="https://wa.me/2250172392929" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M16 3C9.4 3 4 8.3 4 14.9c0 2.3.7 4.5 1.9 6.4L4 29l7.9-2c1.8 1 3.9 1.5 6.1 1.5 6.6 0 12-5.3 12-11.9S22.600 3 16 3zm0 21.800c-1.900 0-3.800-.5-5.400-1.500l-.4-.2-4.600 1.200 1.200-4.500-.3-.4A9.700 9.700 0 0 1 6.200 15C6.200 9.600 10.600 5.300 16 5.300S25.800 9.600 25.800 15 21.400 24.800 16 24.800zm5.400-7.300c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-.9 1.100-.3.200-.6.100a8 8 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.100c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3 2 3.100 4.900 4.300c1.800.8 2.600.9 3.500.7.600-.1 1.800-.7 2-1.400s.3-1.300.2-1.400-.3-.2-.6-.3z"/></svg>
+  </a>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
